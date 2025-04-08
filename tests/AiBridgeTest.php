@@ -47,8 +47,11 @@ class AiBridgeTest extends TestCase
 
     public function testDriverCreation()
     {
-        $driver = Ai::driver('openai');
-        $this->assertInstanceOf(OpenAiDriver::class, $driver);
+        $drivers = ['openai', 'gemini', 'claude'];
+        foreach ($drivers as $driver) {
+            $driver = Ai::driver('openai');
+            $this->assertInstanceOf(OpenAiDriver::class, $driver);
+        }
     }
 
     public function testDefaultDriver()
