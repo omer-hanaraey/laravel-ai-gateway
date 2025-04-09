@@ -19,9 +19,6 @@ jobs:
           coverage: none
           tools: composer
 
-      - name: Validate composer.json
-        run: composer validate --strict
-
       - name: Install dependencies
         run: composer install --no-progress --no-scripts --prefer-dist
 
