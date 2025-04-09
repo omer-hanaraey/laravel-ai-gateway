@@ -4,7 +4,7 @@ namespace LaravelAiBridge\Ai\Drivers;
 use LaravelAiBridge\Ai\Contracts\AiProviderInterface;
 use LaravelAiBridge\Ai\Contracts\AiResponseInterface;
 use LaravelAiBridge\Ai\Responses\StandardizedResponse;
-use Google\Client as GoogleClient;
+use GuzzleHttp\Client as HttpClient;
 
 class GeminiDriver implements AiProviderInterface
 {
@@ -14,8 +14,9 @@ class GeminiDriver implements AiProviderInterface
     public function __construct(array $config)
     {
         $this->config = $config;
-        $this->client = new GoogleClient([
-            'api_key' => $config['api_key']
+        $this->client = new HttpClient([
+            'base_uri' => 'https://generativelanguage.googleapis.com/',
+            'query' => ['key' => $config['api_key']]
         ]);
     }
     
@@ -23,9 +24,10 @@ class GeminiDriver implements AiProviderInterface
     {
         $lastMessage = end($messages);
         
-        $response = $this->client->post('https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent', [
+        $response = $this->client->post('v1beta/models/' . ($this->config['model'] ?? 'gemini-2.0-flash') . ':generateContent', [
             'json' => [
                 'contents' => [
+                    'role' => 'user',
                     'parts' => [
                         ['text' => $lastMessage['content']]
                     ]
