@@ -19,7 +19,12 @@ return [
             'api_key' => env('CLAUDE_API_KEY'),
             'model' => env('CLAUDE_MODEL', 'claude-2'),
         ],
+
+        'deepseek' => [
+            'api_key' => env('DEEPSEEK_API_KEY'),
+            'model' => env('DEEPSEEK_MODEL', 'deepseek-chat'),
+        ],
     ],
     
-    'fallback_order' => ['openai', 'gemini', 'claude'],
+    'fallback_order' => ['openai', 'gemini', 'claude', 'deepseek'],
 ];

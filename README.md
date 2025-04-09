@@ -38,6 +38,9 @@ GEMINI_MODEL=gemini-pro
 
 CLAUDE_API_KEY=your_claude_key
 CLAUDE_MODEL=claude-2
+
+DEEPSEEK_API_KEY=your_deepseek_key
+DEEPSEEK_MODEL=deepseek-chat
 ```
 
 ## Usage

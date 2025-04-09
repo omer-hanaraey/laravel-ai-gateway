@@ -52,7 +52,12 @@ class AiManager
     {
         return new Drivers\ClaudeDriver($config);
     }
-    
+
+    protected function createDeepSeekDriver(array $config)
+    {
+        return new Drivers\DeepSeekDriver($config);
+    }
+
     public function getDefaultDriver()
     {
         return $this->app['config']['ai-bridge.default'];
