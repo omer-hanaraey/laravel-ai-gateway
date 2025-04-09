@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b44ff05b91504fafb1d819733149c85a",
+    "content-hash": "a55d3c67ba4abc8b0bddc0a221c0db81",
     "packages": [
         {
             "name": "brick/math",
@@ -646,16 +646,16 @@
         },
         {
             "name": "google/apiclient",
-            "version": "v2.18.2",
+            "version": "v2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-api-php-client.git",
-                "reference": "d8d201ba8a189a3cd7fb34e4da569f2ed440eee7"
+                "reference": "4eee42d201eff054428a4836ec132944d271f051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/d8d201ba8a189a3cd7fb34e4da569f2ed440eee7",
-                "reference": "d8d201ba8a189a3cd7fb34e4da569f2ed440eee7",
+                "url": "https://api.github.com/repos/googleapis/google-api-php-client/zipball/4eee42d201eff054428a4836ec132944d271f051",
+                "reference": "4eee42d201eff054428a4836ec132944d271f051",
                 "shasum": ""
             },
             "require": {
@@ -709,9 +709,9 @@
             ],
             "support": {
                 "issues": "https://github.com/googleapis/google-api-php-client/issues",
-                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.18.2"
+                "source": "https://github.com/googleapis/google-api-php-client/tree/v2.18.3"
             },
-            "time": "2024-12-16T22:52:40+00:00"
+            "time": "2025-04-08T21:59:36+00:00"
         },
         {
             "name": "google/apiclient-services",
@@ -7151,25 +7151,25 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v8.34.0",
+            "version": "v8.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "34901f999ea67138641b11af682255b94614a8f2"
+                "reference": "8f5b1e0d232481f29f8c081e2e3f1ccd2e314085"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/34901f999ea67138641b11af682255b94614a8f2",
-                "reference": "34901f999ea67138641b11af682255b94614a8f2",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/8f5b1e0d232481f29f8c081e2e3f1ccd2e314085",
+                "reference": "8f5b1e0d232481f29f8c081e2e3f1ccd2e314085",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.2",
                 "fakerphp/faker": "^1.21",
-                "laravel/framework": "^10.48.28",
+                "laravel/framework": "^10.48.29",
                 "mockery/mockery": "^1.5.1",
-                "orchestra/testbench-core": "^8.35.0",
-                "orchestra/workbench": "^8.17.3",
+                "orchestra/testbench-core": "^8.36.0",
+                "orchestra/workbench": "^8.17.5",
                 "php": "^8.1",
                 "phpunit/phpunit": "^9.6|^10.1",
                 "symfony/process": "^6.2",
@@ -7200,9 +7200,9 @@
             ],
             "support": {
                 "issues": "https://github.com/orchestral/testbench/issues",
-                "source": "https://github.com/orchestral/testbench/tree/v8.34.0"
+                "source": "https://github.com/orchestral/testbench/tree/v8.35.0"
             },
-            "time": "2025-03-06T10:59:08+00:00"
+            "time": "2025-04-06T11:27:49+00:00"
         },
         {
             "name": "orchestra/testbench-core",
@@ -7302,16 +7302,16 @@
         },
         {
             "name": "orchestra/workbench",
-            "version": "v8.17.4",
+            "version": "v8.17.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/workbench.git",
-                "reference": "53e91e3b240b31603595662e56bb1debfee7be23"
+                "reference": "15a753d0c5c63a54c282765310dbb590ffd61348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/workbench/zipball/53e91e3b240b31603595662e56bb1debfee7be23",
-                "reference": "53e91e3b240b31603595662e56bb1debfee7be23",
+                "url": "https://api.github.com/repos/orchestral/workbench/zipball/15a753d0c5c63a54c282765310dbb590ffd61348",
+                "reference": "15a753d0c5c63a54c282765310dbb590ffd61348",
                 "shasum": ""
             },
             "require": {
@@ -7363,9 +7363,9 @@
             ],
             "support": {
                 "issues": "https://github.com/orchestral/workbench/issues",
-                "source": "https://github.com/orchestral/workbench/tree/v8.17.4"
+                "source": "https://github.com/orchestral/workbench/tree/v8.17.5"
             },
-            "time": "2025-03-20T06:58:13+00:00"
+            "time": "2025-04-06T10:51:30+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -9027,12 +9027,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "ext-json": "*"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }
