@@ -34,12 +34,6 @@ jobs:
           mkdir -p dist
           tar -czf dist/package-${VERSION}.tar.gz --exclude='./.git' --exclude='./dist' .
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-release
-          path: dist/*.tar.gz
-
       - name: Notify Packagist (if using service hook)
         env:
           PACKAGIST_TOKEN: ${{ secrets.PACKAGIST_TOKEN }}
