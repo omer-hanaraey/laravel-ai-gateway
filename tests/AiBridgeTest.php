@@ -1,23 +1,23 @@
 <?php
 
-namespace LaravelAiBridge\Tests;
+namespace LaravelAiGateway\Tests;
 
-use LaravelAiBridge\Ai\AiManager;
-use LaravelAiBridge\Ai\Drivers\OpenAiDriver;
-use LaravelAiBridge\Ai\Facades\Ai;
+use LaravelAiGateway\Ai\AiManager;
+use LaravelAiGateway\Ai\Drivers\OpenAiDriver;
+use LaravelAiGateway\Ai\Facades\Ai;
 use Orchestra\Testbench\TestCase;
 
 class AiBridgeTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
-        return ['LaravelAiBridge\Ai\AiServiceProvider'];
+        return ['LaravelAiGateway\Ai\AiServiceProvider'];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'Ai' => 'LaravelAiBridge\Ai\Facades\Ai',
+            'Ai' => 'LaravelAiGateway\Ai\Facades\Ai',
         ];
     }
 

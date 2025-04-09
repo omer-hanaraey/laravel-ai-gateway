@@ -44,7 +44,7 @@ CLAUDE_MODEL=claude-2
 Usage Examples 🧑‍💻
 
 ```php
-use LaravelAiBridge\Ai\Facades\Ai;
+use LaravelAiGateway\Ai\Facades\Ai;
 
 $response = Ai::chat([
     ['role' => 'system', 'content' => 'You are a helpful assistant'],
@@ -66,7 +66,7 @@ With Fallback Handling
 ```php
 try {
     $response = Ai::chat([...]);
-} catch (\LaravelAiBridge\Ai\Exceptions\AiException $e) {
+} catch (\LaravelAiGateway\Ai\Exceptions\AiException $e) {
     // Log error
     Log::error("AI request failed: " . $e->getMessage());
     
@@ -106,7 +106,7 @@ All responses implement `AiResponseInterface` with these methods:
 Run the tests with:
 
 ```bash
-composer test
+composer test tests
 ```
 
 ### Contributing

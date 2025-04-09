@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAiBridge\Ai\Contracts;
+namespace LaravelAiGateway\Ai\Contracts;
 
 interface AiProviderInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAiBridge\Ai\Facades;
+namespace LaravelAiGateway\Ai\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

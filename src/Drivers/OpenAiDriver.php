@@ -1,10 +1,10 @@
 <?php
 
-namespace LaravelAiBridge\Ai\Drivers;
+namespace LaravelAiGateway\Ai\Drivers;
 
-use LaravelAiBridge\Ai\Contracts\AiProviderInterface;
-use LaravelAiBridge\Ai\Contracts\AiResponseInterface;
-use LaravelAiBridge\Ai\Responses\StandardizedResponse;
+use LaravelAiGateway\Ai\Contracts\AiProviderInterface;
+use LaravelAiGateway\Ai\Contracts\AiResponseInterface;
+use LaravelAiGateway\Ai\Responses\StandardizedResponse;
 use OpenAI;
 use OpenAI\Client;
 
