@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: shivammathur/setup-php@v2.22.0
+        with:
+          php-version: '8.1'
+          extensions: mbstring, xml, ctype, json
+          coverage: none
+      
+      - run: composer install
+      - run: composer test
