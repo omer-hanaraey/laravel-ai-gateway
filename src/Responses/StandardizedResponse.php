@@ -1,9 +1,9 @@
 <?php
 
 // src/Responses/StandardizedResponse.php
-namespace LaravelAiBridge\Ai\Responses;
+namespace LaravelAiGateway\Ai\Responses;
 
-use LaravelAiBridge\Ai\Contracts\AiResponseInterface;
+use LaravelAiGateway\Ai\Contracts\AiResponseInterface;
 
 class StandardizedResponse implements AiResponseInterface
 {

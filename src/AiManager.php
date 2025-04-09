@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAiBridge\Ai;
+namespace LaravelAiGateway\Ai;
 
 use InvalidArgumentException;
 

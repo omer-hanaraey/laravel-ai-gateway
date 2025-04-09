@@ -16,7 +16,7 @@
         "ext-json": "*",
         "illuminate/support": "^9.0 || ^10.0 || ^11.0 || ^12.0",
         "openai-php/client": "^0.6",
-        "symfony/http-client": "^6.4 | ^7.2",
+        "symfony/http-client": "^6.4 || ^7.2",
         "nyholm/psr7": "^1.8",
         "google/apiclient": "^2.18"
     },
@@ -26,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelAiBridge\\Ai\\": "src/"
+            "LaravelAiGateway\\Ai\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelAiBridge\\Tests\\": "tests/"
+            "LaravelAiGateway\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -40,10 +40,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelAiBridge\\Ai\\AiServiceProvider"
+                "LaravelAiGateway\\Ai\\AiServiceProvider"
             ],
             "aliases": {
-                "Ai": "LaravelAiBridge\\Ai\\Facades\\Ai"
+                "Ai": "LaravelAiGateway\\Ai\\Facades\\Ai"
             }
         }
     },
