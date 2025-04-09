@@ -1,5 +1,5 @@
 {
-    "name": "omer-hanaraey/laravel-ai-bridge",
+    "name": "omer-hanaraey/laravel-ai-gateway",
     "description": "A unified interface for multiple AI providers in Laravel",
     "type": "library",
     "license": "MIT",
