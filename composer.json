@@ -6,9 +6,11 @@
     "authors": [
         {
             "name": "Omer hamza",
-            "email": "omerhanaraiy@email.com"
+            "email": "omerhanaraiy@gmail.com",
+            "homepage": "https://omer-hamza.dev"
         }
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": "^8.1",
         "illuminate/support": "^10.0",
