@@ -1,0 +1,51 @@
+name: Deploy to Packagist
+
+on:
+  push:
+    tags:
+      - 'v*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          coverage: none
+          tools: composer
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Install dependencies
+        run: composer install --no-progress --no-scripts --prefer-dist
+
+      - name: Run tests
+        run: composer test tests
+
+      - name: Create .tar.gz archive
+        run: |
+          VERSION=$(git describe --tags --abbrev=0)
+          mkdir -p dist
+          tar -czf dist/package-${VERSION}.tar.gz --exclude='./.git' --exclude='./dist' .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: package-release
+          path: dist/*.tar.gz
+
+      - name: Notify Packagist (if using service hook)
+        env:
+          PACKAGIST_TOKEN: ${{ secrets.PACKAGIST_TOKEN }}
+          PACKAGIST_USERNAME: ${{ secrets.PACKAGIST_USERNAME }}
+        run: |
+          curl -X POST \
+            -H 'Content-Type: application/json' \
+            -d '{"repository":{"url":"https://github.com/${{ github.repository }}}"}' \
+            "https://packagist.org/api/update-package?username=${PACKAGIST_USERNAME}&apiToken=${PACKAGIST_TOKEN}"
