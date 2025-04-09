@@ -15,7 +15,7 @@ A unified interface for multiple AI providers in Laravel applications.
 1. Install via Composer:
 
 ```bash
-composer require your-vendor/laravel-ai-bridge
+composer require omer-hanaraey/laravel-ai-gateway
 ```
 
 2. Publish the configuration file:
