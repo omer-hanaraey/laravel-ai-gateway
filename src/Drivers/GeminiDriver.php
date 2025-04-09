@@ -4,17 +4,17 @@ namespace LaravelAiGateway\Ai\Drivers;
 use LaravelAiGateway\Ai\Contracts\AiProviderInterface;
 use LaravelAiGateway\Ai\Contracts\AiResponseInterface;
 use LaravelAiGateway\Ai\Responses\StandardizedResponse;
-use GuzzleHttp\Client as HttpClient;
+use GuzzleHttp\Client;
 
 class GeminiDriver implements AiProviderInterface
 {
-    protected $client;
-    protected $config;
+    protected Client $client;
+    protected array $config;
     
     public function __construct(array $config)
     {
         $this->config = $config;
-        $this->client = new HttpClient([
+        $this->client = new Client([
             'base_uri' => 'https://generativelanguage.googleapis.com/',
             'query' => ['key' => $config['api_key']]
         ]);

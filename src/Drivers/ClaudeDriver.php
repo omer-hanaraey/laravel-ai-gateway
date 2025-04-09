@@ -9,8 +9,8 @@ use GuzzleHttp\Exception\RequestException;
 
 class ClaudeDriver implements AiProviderInterface
 {
-    protected $client;
-    protected $config;
+    protected Client $client;
+    protected array $config;
     protected $baseUrl = 'https://api.anthropic.com/v1/messages';
     
     public function __construct(array $config)
