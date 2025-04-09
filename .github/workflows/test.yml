@@ -32,7 +32,7 @@ jobs:
       - run: composer install
       - name: Run tests and generate coverage report
         run: |
-          vendor/bin/phpunit --coverage-clover=coverage.xml --coverage-text
+          vendor/bin/phpunit tests --coverage-clover=coverage.xml --coverage-text
 
       - name: Check code coverage
         id: coverage_check
