@@ -58,6 +58,11 @@ class AiManager
         return new Drivers\DeepSeekDriver($config);
     }
 
+    protected function createMistralDriver(array $config)
+    {
+        return new Drivers\MistralDriver($config);
+    }
+
     public function getDefaultDriver()
     {
         return $this->app['config']['ai-bridge.default'];
