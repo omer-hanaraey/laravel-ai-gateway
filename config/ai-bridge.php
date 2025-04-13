@@ -24,6 +24,11 @@ return [
             'api_key' => env('DEEPSEEK_API_KEY'),
             'model' => env('DEEPSEEK_MODEL', 'deepseek-chat'),
         ],
+
+        'mistral' => [
+            'api_key' => env('MISTRAL_API_KEY'),
+            'model' => env('MISTRAL_MODEL', 'mistral-large-latest'),
+        ],
     ],
     
     'fallback_order' => ['openai', 'gemini', 'claude', 'deepseek'],
