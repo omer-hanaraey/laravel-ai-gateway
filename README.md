@@ -4,7 +4,7 @@ A unified interface for multiple AI providers in Laravel applications.
 
 ## Features
 
-- Support for multiple AI providers (OpenAI, Gemini, Claude)
+- Support for multiple AI providers (OpenAI, Gemini, Claude, DeepSeek, Mistral, and Cohere)
 - Unified API interface
 - Easy driver switching
 - Standardized response format
@@ -41,6 +41,13 @@ CLAUDE_MODEL=claude-2
 
 DEEPSEEK_API_KEY=your_deepseek_key
 DEEPSEEK_MODEL=deepseek-chat
+
+MISTRAL_API_KEY=your_mistral_key
+MISTRAL_MODEL=mistral-large-latest
+
+COHERE_API_KEY=your_cohere_key
+COHERE_MODEL=command-a-03-2025
+COHERE_CLIENT_NAME=your_cohere_client
 ```
 
 ## Usage
@@ -92,8 +99,6 @@ $result = Ai::moderate('Inappropriate text to check');
 
 ### Available Methods
 - `chat(array $messages)`: Send chat completion
-- `embed(string $text)`: Create embeddings
-- `moderate(string $input)`: Content moderation
 - `driver(string $name)`: Switch between providers
 
 ### Response Format 📦
