@@ -19,6 +19,6 @@ class AiServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/ai-bridge.php' => config_path('ai-bridge.php'),
-        ]);
+        ], 'ai-bridge-config'); 
     }
 }

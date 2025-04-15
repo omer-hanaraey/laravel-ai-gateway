@@ -30,11 +30,6 @@ return [
             'model' => env('MISTRAL_MODEL', 'mistral-large-latest'),
         ],
 
-        'anthropic' => [
-            'api_key' => env('ANTHROPIC_API_KEY'),
-            'model' => env('ANTHROPIC_MODEL', 'claude-2'),
-        ],
-
         'cohere' => [
             'api_key' => env('COHERE_API_KEY'),
             'model' => env('COHERE_MODEL', 'command-a-03-2025'),
