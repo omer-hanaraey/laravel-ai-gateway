@@ -71,31 +71,6 @@ $response = Ai::driver('claude')
     ->withModel('claude-3-haiku-20240307')
     ->chat([...]);
 ```
-With Fallback Handling
-
-```php
-try {
-    $response = Ai::chat([...]);
-} catch (\LaravelAiGateway\Ai\Exceptions\AiException $e) {
-    // Log error
-    Log::error("AI request failed: " . $e->getMessage());
-    
-    // Try next provider automatically
-    $response = Ai::fallback()->chat([...]);
-}
-```
-
-Embeddings
-
-```php
-$embedding = Ai::embed('Some text to embed');
-```
-
-Moderation
-
-```php
-$result = Ai::moderate('Inappropriate text to check');
-```
 
 ### Available Methods
 - `chat(array $messages)`: Send chat completion
