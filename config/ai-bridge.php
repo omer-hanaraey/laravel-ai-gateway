@@ -29,6 +29,17 @@ return [
             'api_key' => env('MISTRAL_API_KEY'),
             'model' => env('MISTRAL_MODEL', 'mistral-large-latest'),
         ],
+
+        'anthropic' => [
+            'api_key' => env('ANTHROPIC_API_KEY'),
+            'model' => env('ANTHROPIC_MODEL', 'claude-2'),
+        ],
+
+        'cohere' => [
+            'api_key' => env('COHERE_API_KEY'),
+            'model' => env('COHERE_MODEL', 'command-a-03-2025'),
+            'client_name' => env('COHERE_CLIENT_NAME', 'laravel-ai-gateway'),
+        ],
     ],
     
     'fallback_order' => ['openai', 'gemini', 'claude', 'deepseek'],

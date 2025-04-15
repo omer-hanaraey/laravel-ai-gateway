@@ -63,6 +63,11 @@ class AiManager
         return new Drivers\MistralDriver($config);
     }
 
+    protected function createCohereDriver(array $config)
+    {
+        return new Drivers\CohereDriver($config);
+    }
+
     public function getDefaultDriver()
     {
         return $this->app['config']['ai-bridge.default'];
